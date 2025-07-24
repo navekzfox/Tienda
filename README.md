@@ -1,3 +1,13 @@
+## Titulo
+Codigo de una aplicacion web desarrollada en Laravel 10, con un sistema de autenticacion y registro de usuarios. como un apartado de vendedores y productos y un apartado de ventas. Es una tienda en linea que permite a los usuarios registrarse, iniciar sesion, ver productos, agregar productos al carrito y realizar compras. Como ser un vendedor, puedes agregar productos, ver tus ventas y administrar tu inventario. 
+
+
+## Requisitos
+- PHP >= 8.1
+- Composer
+- Laravel >= 10.0
+- MySQL o MariaDB
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

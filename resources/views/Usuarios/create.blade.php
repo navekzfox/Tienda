@@ -1,4 +1,4 @@
-@extends('layouts/plantilla')
+@extends('layouts/cuerpo')
 
 @section('title','Registrate|Gameplanet')
 
@@ -6,19 +6,19 @@
 
 <main>
 
-<div class="container py-4">
+<div class="formulario">
 
 <h2>Registrate</h2>
 
 @if ($errors->any())
 
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="Alerta-de-advertencia" role="alert">
   <ul>
     @foreach($errors->all() as $error)
     <li>{{$error}}</li>
     @endforeach
   </ul>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <button type="button" class="boton-de-cierre" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
 </div>
 
 @endif
@@ -27,52 +27,39 @@
 
 @csrf
 
-<div class="mb-3 row">
+
     <label for="Usuario" class="col-sm-2 col-form-label">Usuario:</label>
-<div class="col-sm-5">
-    <input type="text" class="form-control" name="Usuario" id="Usuario" value="{{old('Usuario')}}" required>
-</div>
-</div>
 
-<div class="mb-3 row">
+    <input type="text" class="controls" name="Usuario" id="Usuario" value="{{old('Usuario')}}">
+
     <label for="contraseña" class="col-sm-2 col-form-label">Contraseña:</label>
-<div class="col-sm-5">
-    <input type="text" class="form-control" name="contraseña" id="contraseña" value="{{old('contraseña')}}" required>
-</div>
-</div>
 
-<div class="mb-3 row">
+    <input type="text" class="controls" name="contraseña" id="contraseña" value="{{old('contraseña')}}">
+
+
     <label for="Nombre" class="col-sm-2 col-form-label">Nombre:</label>
-<div class="col-sm-5">
-    <input type="text" class="form-control" name="Nombre" id="Nombre" value="{{old('Nombre')}}" required>
-</div>
-</div>
 
-<div class="mb-3 row">
+    <input type="text" class="controls" name="Nombre" id="Nombre" value="{{old('Nombre')}}">
+
+
     <label for="Apellido" class="col-sm-2 col-form-label">Apellido:</label>
-<div class="col-sm-5">
-    <input type="text" class="form-control" name="Apellido" id="Apellido" value="{{old('Apellido')}}" required>
-</div>
-</div>
 
-<div class="mb-3 row">
+    <input type="text" class="controls" name="Apellido" id="Apellido" value="{{old('Apellido')}}" >
+
     <label for="Fecha" class="col-sm-2 col-form-label">Fecha de nacimiento:</label>
-<div class="col-sm-5">
-<input type="date" class="form-control" name="Fecha" id="Fecha"  value="{{old('Fecha')}}" required>
-</div>
-</div>
 
-<div class="mb-3 row">
+<input type="date" class="controls" name="Fecha" id="Fecha"  value="{{old('Fecha')}}" >
+
+
     <label for="email" class="col-sm-2 col-form-label">Correo electronico:</label>
-<div class="col-sm-5">
-    <input type="text" class="form-control" name="email" id="email" value="{{old('email')}}">
-</div>
-</div>
 
-<a href="{{ url('Usuarios')}}" class="btn btn-secondary">Regresar</a>
+    <input  type="text" class="controls" name="email" id="email" value="{{old('email')}}">
 
-<button type="submit" class="btn btn-success" >Guardar</button>
+    <button class="botons" type="submit">Guardar</button>
+
+    <a href="/" class="btn btn-secondary">Regresar</a>
 
 </form>
 </div>
 </main>
+@endsection

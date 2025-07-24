@@ -31,7 +31,7 @@ Route::get('/Cuentapersonal', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('bienvenida');
 });
 
 Route::get('/iniciar', [LoginController::class, 'showLoginForm'])->name('login.form');

@@ -1,6 +1,6 @@
 @extends('layouts/cuerpo')
 
-@section('title','mensaje de guardado|Playcity')
+@section('title','Mensaje editar datos|Playcity')
 
 @section('contenido')
 
@@ -9,7 +9,7 @@
 
  <h2>{{$msg}}</h2>
 
- <h3><a href="{{ url('/iniciar') }}">Regresar</a></h3>
+ <h3><a href="{{ url('/Cuentapersonal') }}">Regresar</a></h3>
 
  </div>
 

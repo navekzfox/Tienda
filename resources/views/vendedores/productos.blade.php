@@ -1,4 +1,4 @@
-@extends('layouts/plantilla')
+@extends('layouts.productos')
 
 @section('title','Productos|Gameplanet')
 
@@ -6,41 +6,38 @@
 
 <main>
 
-
-<table class="table table-hover">
+<table class="tabla-productos">
 
 <thead>
  <tr>
-    <th>id</th>
-    <th>nombre</th>
-    <th>descripcion</th>
-    <th>precio</th>
-    <th>cantidad</th>
-    <th>fecha de creacion</th>
-    <th></th>
-    <th></th>
+    <th style="display: none;">id</th>
+    <th >nombre</th>
+    <th >descripcion</th>
+    <th >precio</th>
+    <th >cantidad</th>
+    <th >fecha de creacion</th>
+
  </tr>
  </thead>
 
  <tbody>
 @foreach($objeto as $info)
  <tr>
-    <td>{{$info->id}}</td>
-    <td>{{$info->nombre}}</td>
-    <td>{{$info->descripcion}}</td>
-    <td>{{$info->precio}}</td>
-    <td>{{$info->cantidad}}</td>
-    <td>{{$info->created_at}}</td>
-    <td></td>
+    <td data-label="ID" style="display: none;">{{$info->id}}</td>
+    <td data-label="Nombre">{{$info->nombre}}</td>
+    <td data-label="Descripción">{{$info->descripcion}}</td>
+    <td data-label="Precio">{{$info->precio}}</td>
+    <td data-label="Cantidad">{{$info->cantidad}}</td>
+    <td data-label="Fecha de Creación">{{$info->created_at}}</td>
     <td>
-                    <a href="{{ url('vendedores/' . $info->id . '/edit') }}" class="btn btn-warning btn-sm">
+                    <a href="{{ url('Vendedores/' . $info->id . '/edit') }}" class="editar">
                         Editar
                     </a>
                 </td>
-    <td> <form action="{{ url('vendedores/'.$info->id)}}" method="post">
+    <td> <form action="{{ url('Vendedores/'.$info->id)}}" method="post">
         @method("DELETE")
         @csrf
-        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+        <button type="submit" class="advertencia">Eliminar</button>
         </form>
     </td>
     <td></td>
@@ -49,7 +46,5 @@
  </tbody>
 
 </table>
-
-<a href="{{ url('vendedores/cuenta')}}" class="btn btn-secondary">Regresar</a>
-
 </main>
+@endsection

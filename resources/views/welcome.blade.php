@@ -1,11 +1,11 @@
-@extends('layouts/plantilla')
+@extends('layouts/cuerpo')
 
-@section('title','Usuarios|Gameplanet')
+@section('title','Inicio|Playcity')
 
 @section('contenido')
 
 <main>
-<h1 class="logo">Gameplanet</h1>
+<h1 class="Titulo">Porfavor elige</h1>
 
 <div class="container py-4">
 
@@ -18,9 +18,7 @@
 
 <h2>Ingresar como vendedor</h2>
 <a href="{{ url('vendedores') }}" class="btn btn-primary btn-sm">Vendedor</a>
-
 </div>
-
 </main>
 
 @endsection

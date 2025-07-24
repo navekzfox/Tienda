@@ -21,9 +21,14 @@
 <nav class="navegacion">
 
 <ul class="menu" id="menu">
-    <li><a href="{{ url('Vendedores/create') }}">Agregar productos</a></li>
-         <li><a href="{{ url('Vendedores/show') }}">Ver productos</a></li>
-        <li><a href="{{ route('vendedores.logout') }}" class="advertencia">Cerrar sesión</a></li>
+    <li><a href="/">Menu principal</a></li>
+    <li><a href="{{ url('Usuarios/' . $usuarioLogueado->id . '/edit') }}">Editar cuenta</a></li>
+    <li><a href="{{ url('/ver') }}">Ver productos</a></li>
+    <li><form action="{{ url('Usuarios/' . $usuarioLogueado->id) }}" method="POST">
+                    @method("DELETE")
+                        @csrf
+                        <button type="submit" class="advertencia" onclick="return confirm('¿Estás seguro?')">Eliminar cuenta</button>
+                    </form></li>
     </ul>
 </nav>
 </div>

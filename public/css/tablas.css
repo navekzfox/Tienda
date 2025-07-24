@@ -1,0 +1,168 @@
+.tabla-estilo {
+  overflow-x: auto;
+  margin: 20px auto;
+  border-radius: 1rem;
+  border: 2px solid #00ffff;
+  background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  padding: 20px;
+  max-width: 90%;
+}
+
+/* Tabla base */
+.tabla-estilo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Encabezados */
+.tabla-estilo th {
+  background: linear-gradient(to right, #00bcd4, #0097a7);
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 16px;
+  border: 2px solid #00ffff;
+}
+
+/* Celdas */
+.tabla-estilo td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 20px;
+  max-width: 200px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fila alternada para mejor lectura */
+.tabla-estilo tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tabla-estilo tr:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+
+
+.tabla-productos {
+  overflow-x: auto;
+  margin: 20px auto;
+  border-radius: 1rem;
+  border: 2px solid #00ffff;
+  background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  padding: 20px;
+  max-width: 95%;
+}
+
+.tabla-productos table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.tabla-productos th {
+  background: linear-gradient(to right, #0097a7, #00bcd4);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabla-productos td {
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.03);
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.tabla-productos tr:nth-child(even) td {
+  background-color: rgba(0, 255, 255, 0.04);
+}
+
+.tabla-productos tr:hover td {
+  background-color: rgba(0, 255, 255, 0.08);
+  transition: background 0.3s ease;
+}
+
+.tabla-productos a.editar {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(145deg, #ffae42, #ff9900);
+  color: #1c1c1c;
+  border: 1px solid #ffae42;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(255, 174, 66, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tabla-productos a.editar:hover {
+  background: linear-gradient(145deg, #ff9900, #ffaa33);
+  color: #000;
+  box-shadow: 0 6px 12px rgba(255, 174, 66, 0.5);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .tabla-productos {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .tabla-productos table,
+  .tabla-productos thead,
+  .tabla-productos tbody,
+  .tabla-productos th,
+  .tabla-productos tr {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-productos thead {
+    display: none;
+  }
+
+  .tabla-productos td {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
+    position: relative;
+  }
+
+  .tabla-productos td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ffff;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  .tabla-productos tr {
+    margin-bottom: 20px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+}

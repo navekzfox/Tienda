@@ -1,4 +1,4 @@
-@extends('layouts/plantilla')
+@extends('layouts/inicio')
 
 @section('title','Vendedores|Gameplanet')
 
@@ -6,15 +6,16 @@
 
 <main>
 
-<div class="container py-4">
+<div class="cuadrodetexto-advertencia">
 
-<h2>Ingresar</h2>
-<a href="{{ url('vendedores/login')}}" class="btn btn-primary btn-sm">Iniciar con una cuenta existente</a>
-
-
-<br>
+<h2>Esta ingresando en una cuenta de vendedores de Playcity de favor si no es vendedor regrese al Inicio</h2>
+<p>Si no tienes una cuenta, puedes regresar al inicio a crear una de usuario.</p>
 <br>
 <a href="{{ url('/')}}" class="btn btn-secondary">Regresar</a>
+<br>
+<a href="{{ url('vendedores/login')}}" class="btn btn-primary btn-sm">Continuar si es vendedor</a>
+
 </div>
 
 </main>
+@endsection

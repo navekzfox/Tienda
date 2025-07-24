@@ -74,7 +74,7 @@ class UsuariosController extends Controller
     {
          $request->validate([
             'Usuario' => 'required|max:10|unique:usuarios,Usuario,'.$id,
-            'contraseña' => 'required|max:12|unique:usuarios'.$id,
+            'contraseña' => 'required|max:12|unique:usuarios,contraseña,'.$id,
             'Nombre' => 'required|max:50',
             'Apellido' => 'required|max:50',
             'Fecha' => 'required|date',

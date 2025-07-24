@@ -1,16 +1,17 @@
-@extends('layouts/plantilla')
+@extends('layouts/cuerpo')
 
-@section('title','Producto|Gameplanet')
+@section('title','confirmación|Playcity')
 
 @section('contenido')
 
 <main>
- <div class="container_py-4">
+ <div class="cuadrodetexto">
 
  <h2>{{$msg}}</h2>
 
- <a href="{{ url('vendedores/cuenta') }}" class="btn btn-secondary">Regresar</a>
+ <h3><a href="{{ url('Vendedores/show') }}">Regresar</a></h3>
 
  </div>
 
 </main>
+@endsection
