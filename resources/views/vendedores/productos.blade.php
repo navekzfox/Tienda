@@ -11,11 +11,11 @@
 <thead>
  <tr>
     <th style="display: none;">id</th>
-    <th >nombre</th>
-    <th >descripcion</th>
-    <th >precio</th>
-    <th >cantidad</th>
-    <th >fecha de creacion</th>
+    <th >Nombre</th>
+    <th >Descripción</th>
+    <th >Precio</th>
+    <th >Cantidad</th>
+    <th >Fecha de Creación</th>
 
  </tr>
  </thead>

@@ -30,7 +30,7 @@ class UsuariosController extends Controller
     {
         $request->validate([
             'Usuario' => 'required|unique:usuarios|max:10',
-            'contraseña' => 'required|unique:usuarios|max:12',
+            'contraseña' => 'required|max:12',
             'Nombre' => 'required|max:50',
             'Apellido' => 'required|max:50',
             'Fecha' => 'required|date',
@@ -74,7 +74,7 @@ class UsuariosController extends Controller
     {
          $request->validate([
             'Usuario' => 'required|max:10|unique:usuarios,Usuario,'.$id,
-            'contraseña' => 'required|max:12|unique:usuarios,contraseña,'.$id,
+            'contraseña' => 'required|max:12,contraseña,'.$id,
             'Nombre' => 'required|max:50',
             'Apellido' => 'required|max:50',
             'Fecha' => 'required|date',
@@ -91,7 +91,7 @@ class UsuariosController extends Controller
         $cuenta->save();
 
 
-        return view("Usuarios.mensaje",['msg' => "Se ha modificado la cuenta correctamente"]);
+        return view("Usuarios.msjupd",['msg' => "Se ha modificado la cuenta correctamente"]);
     }
 
     /**
@@ -102,7 +102,7 @@ class UsuariosController extends Controller
         $datos = Usuarios::find($id);
         $datos->delete();
 
-        return redirect("Usuarios");
+        return redirect("/");
     }
 
 }

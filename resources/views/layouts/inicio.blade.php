@@ -14,9 +14,9 @@
 <header>
 <div class="encabezado">
 
-    <img src="{{ asset('imagen/Ellen2.png')}}" alt="">
-     <a href="{{ url('Vendedores') }}" class="">a</a>
-<h2 class="Titulo">Playcity</h2>
+
+     <a href="{{ url('Vendedores') }}" class=""><img src="{{ asset('imagen/Ellen2.png')}}" alt=""></a>
+     <h2 class="Titulo">Playcity</h2>
 </div>
 
 </header>

@@ -32,7 +32,7 @@ class VendedorLoginController extends Controller
     {
         Session::forget('vendedor_id');
         Session::forget('vendedor_nombre');
-        return redirect()->route('vendedores.login');
+        return redirect('/');
     }
 
     public function showCuenta()

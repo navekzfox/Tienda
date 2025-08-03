@@ -8,7 +8,14 @@ use App\Models\Productos;
 use App\Models\Usuarios;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\CarritoController;
 
+/** Rutas del carrito */
+Route::get('/carrito/agregar/{id}', [CarritoController::class, 'agregar'])->name('carrito.agregar');
+Route::get('/carrito', [CarritoController::class, 'mostrar'])->name('carrito.mostrar');
+Route::get('/carrito/eliminar/{id}', [CarritoController::class, 'eliminar'])->name('carrito.eliminar');
+
+/** Rutas del login de los vendedores */
 Route::get('vendedores/login', [VendedorLoginController::class, 'showLoginForm'])
     ->name('vendedores.login');
 Route::post('vendedores/login', [VendedorLoginController::class, 'login'])
@@ -18,6 +25,7 @@ Route::get('vendedores/logout', [VendedorLoginController::class, 'logout'])
 Route::get('vendedores/cuenta', [VendedorLoginController::class, 'showCuenta'])
     ->name('vendedores.cuenta');
 
+/** Rutas del login de los usuarios*/
 Route::get('/Cuentapersonal', function () {
     $usuarioLogueado = null;
 
@@ -30,16 +38,14 @@ Route::get('/Cuentapersonal', function () {
     ]);
 });
 
-Route::get('/', function () {
-    return view('bienvenida');
-});
-
 Route::get('/iniciar', [LoginController::class, 'showLoginForm'])->name('login.form');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
+
+/** Rutas para la gestión de las cuentas */
 Route::get('/cuentas', function () {
     $cuenta = \App\Models\Usuarios::all();
 
@@ -54,11 +60,17 @@ Route::get('/cuentas', function () {
     ]);
 });
 
+/** Rutas para la visualización de los productos */
 Route::get('/ver',function ()
     {
         $objeto = Productos::all();
     return view('vendedores.ver', ['objeto' => $objeto]);
     });
+
+    /** Rutas de la página de inicio*/
+Route::get('/', function () {
+    return view('bienvenida');
+});
 
 Route::resource('/Vendedores',VendedorController::class);
 

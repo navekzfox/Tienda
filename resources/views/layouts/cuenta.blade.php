@@ -21,9 +21,10 @@
 <nav class="navegacion">
 
 <ul class="menu" id="menu">
-    <li><a href="/">Menu principal</a></li>
+    <li><a href="/logout">Cerrar sesión</a></li>
     <li><a href="{{ url('Usuarios/' . $usuarioLogueado->id . '/edit') }}">Editar cuenta</a></li>
     <li><a href="{{ url('/ver') }}">Ver productos</a></li>
+    <li><a class="carrito" href="{{ route('carrito.mostrar') }}">Ver carrito</a></li>
     <li><form action="{{ url('Usuarios/' . $usuarioLogueado->id) }}" method="POST">
                     @method("DELETE")
                         @csrf

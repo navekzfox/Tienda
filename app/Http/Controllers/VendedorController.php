@@ -30,8 +30,8 @@ class VendedorController extends Controller
     {
          $request->validate([
             'nombre' => 'required|max:50',
-            'descripcion' => 'max:100',
-            'precio' => 'required|max:50',
+            'descripcion' => 'max:500',
+            'precio' => 'required|max:15',
             'cantidad' => 'required|max:50'
         ]);
 
@@ -70,8 +70,8 @@ class VendedorController extends Controller
     {
         $request->validate([
             'nombre' => 'required|max:50',
-            'descripcion' => 'max:100',
-            'precio' => 'required|max:50',
+            'descripcion' => 'max:500',
+            'precio' => 'required|max:15',
             'cantidad' => 'required|max:50'
         ]);
 
@@ -94,6 +94,6 @@ class VendedorController extends Controller
         $datos = Productos::find($id);
         $datos->delete();
 
-        return redirect("vendedores/cuenta");
+        return redirect("Vendedores/show");
     }
 }

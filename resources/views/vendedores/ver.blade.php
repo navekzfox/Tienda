@@ -6,17 +6,22 @@
 
 <main>
 
+@if(session('success'))
+    <div class="Alerta-de-exito">
+        {{ session('success') }}
+    </div>
+@endif
 
 <table class="tabla-productos">
 
 <thead>
  <tr>
-    <th data-label="ID" style="display: none;">id</th>
-    <th data-label="Nombre">nombre</th>
-    <th data-label="Descripción">descripcion</th>
-    <th data-label="Precio">precio</th>
-    <th data-label="Cantidad">cantidad</th>
-    <th data-label="Fecha de creación">fecha de creacion</th>
+    <th data-label="ID" style="display: none;">ID</th>
+    <th data-label="Nombre">Nombre</th>
+    <th data-label="Descripción">Descripción</th>
+    <th data-label="Precio">Precio</th>
+    <th data-label="Cantidad">Cantidad</th>
+    <th data-label="Fecha de creación">Fecha de agregado</th>
  </tr>
  </thead>
 
@@ -30,8 +35,8 @@
     <td data-label="Cantidad">{{$info->cantidad}}</td>
     <td data-label="Fecha de creación">{{$info->created_at}}</td>
     <td>
-        <a href="{{ url('/Cuentapersonal')}}">Añadir al carrito</a>
-</td>
+        <a class="carrito" href="{{ route('carrito.agregar', $info->id) }}">Añadir al carrito</a>
+    </td>
 
 @endforeach
  </tbody>

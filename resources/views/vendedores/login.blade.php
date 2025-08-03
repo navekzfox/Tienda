@@ -6,7 +6,7 @@
     <form action="{{ route('vendedores.login.submit') }}" method="POST">
         @csrf
             <label for="Clave_ingreso" class="form-label">Código de ingreso</label>
-            <input id="Clave_ingreso" name="Clave_ingreso" class="controls" value="{{ old('codigo') }}" required>
+            <input type="password" id="Clave_ingreso" name="Clave_ingreso" class="controls" value="{{ old('codigo') }}" required>
             @error('Clave_ingreso')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
