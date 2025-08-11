@@ -9,7 +9,7 @@
 
     {{-- Mensaje de éxito --}}
     @if(session('success'))
-        <div class="aleta-de-exito">
+        <div class="cuadrodetexto-advertencia">
             {{ session('success') }}
         </div>
     @endif
