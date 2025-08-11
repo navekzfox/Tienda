@@ -34,7 +34,7 @@
 
     <label for="contraseña" class="col-sm-2 col-form-label">Contraseña:</label>
 
-    <input type="text" class="controls" name="contraseña" id="contraseña" value="{{old('contraseña')}}">
+    <input type="password" class="controls" name="contraseña" id="contraseña" value="{{old('contraseña')}}">
 
 
     <label for="Nombre" class="col-sm-2 col-form-label">Nombre:</label>
