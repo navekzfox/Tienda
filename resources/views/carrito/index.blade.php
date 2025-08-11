@@ -54,11 +54,13 @@
             </tfoot>
         </table>
     @else
-        <p>No hay productos en el carrito.</p>
+        <div class="cuadrodetexto">
+            <p>No hay productos en el carrito.</p>
+        </div>
     @endif
 
-    <div class="mt-4">
-        <a class="carrito" href="{{ url('/') }}">Seguir comprando</a>
+    <div class="acciones">
+        <a class="carrito" href="{{ url('/ver') }}">Seguir comprando</a>
     </div>
 </main>
 @endsection
