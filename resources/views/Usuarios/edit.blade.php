@@ -33,8 +33,12 @@
 
 
     <label for="contraseña" class="col-sm-2 col-form-label">Contraseña:</label>
-    <input type="text" class="controls" name="contraseña" id="contraseña" value="{{ $datos->contraseña}}" required>
-
+     <div class="contenedor-contraseña">
+    <input type="password" class="controls" name="contraseña" id="contraseña" value="{{old('contraseña')}}">
+    <button onclick="togglePassword()" type="button">
+        <img src="{{ asset('imagen/Oculto.png') }}">
+    </button>
+    </div>
 
 
     <label for="Nombre" class="col-sm-2 col-form-label">Nombre:</label>

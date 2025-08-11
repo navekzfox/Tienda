@@ -31,8 +31,12 @@
 
 
         <label for="contraseña">Contraseña:</label>
-        <input  class="controls" type="password" name="contraseña">
-
+         <div class="contenedor-contraseña">
+    <input type="password" class="controls" name="contraseña" id="contraseña" value="{{old('contraseña')}}">
+    <button onclick="togglePassword()" type="button">
+        <img src="{{ asset('imagen/Oculto.png') }}">
+    </button>
+    </div>
 
 
     <button class="botons" type="submit">Iniciar sesión</button>

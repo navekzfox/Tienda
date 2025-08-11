@@ -27,5 +27,6 @@
 @yield('contenido')
 
 <script src="{{ asset('js/alertas.js') }}"></script>
+<script src="{{ asset('js/acciones.js') }}"></script>
 </body>
 </html>
