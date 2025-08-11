@@ -14,6 +14,18 @@
         </div>
     @endif
 
+    {{-- Mensaje de error --}}
+    @if(session('error'))
+<div class="Alerta-de-advertencia" role="alert">
+  <ul>
+    <li>{{ session('error') }}</li>
+  </ul>
+  <button type="button" class="boton-de-cierre" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
+</div>
+
+@endif
+
+
     @php $total = 0; @endphp
 
     @if(session('carrito') && count(session('carrito')) > 0)
@@ -24,7 +36,7 @@
                     <th>Precio</th>
                     <th>Cantidad</th>
                     <th>Subtotal</th>
-                    <th>Acción</th>
+                    <th style="display: none;">Acción</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,10 +48,10 @@
                         $total += $subtotal;
                     @endphp
                     <tr>
-                        <td>{{ $producto['nombre'] }}</td>
-                        <td>${{ number_format($precio, 2) }}</td>
-                        <td>{{ $cantidad }}</td>
-                        <td>${{ number_format($subtotal, 2) }}</td>
+                        <td data-label="Producto">{{ $producto['nombre'] }}</td>
+                        <td data-label="Precio">${{ number_format($precio, 2) }}</td>
+                        <td data-label="Cantidad">{{ $cantidad }}</td>
+                        <td data-label="Subtotal">${{ number_format($subtotal, 2) }}</td>
                         <td>
                             <a href="{{ route('carrito.eliminar', $id) }}" class="carrito">Eliminar</a>
                         </td>

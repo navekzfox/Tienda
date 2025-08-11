@@ -44,6 +44,6 @@ class CarritoController extends Controller
             session()->put('carrito', $carrito);
         }
 
-        return redirect()->back()->with('success', 'Producto eliminado del carrito');
+        return redirect()->back()->with('error', 'Producto eliminado del carrito');
     }
 }

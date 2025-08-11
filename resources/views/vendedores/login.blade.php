@@ -21,7 +21,7 @@
         <button class="botons">Ingresar</button>
     </form>
 
-    <a href="{{ url('Vendedores')}}" class="btn btn-secondary">Regresar</a>
+    <a href="{{ url('/')}}" class="btn btn-secondary">Regresar</a>
 
 </main>
 @endsection
