@@ -22,6 +22,7 @@
 
 <ul class="menu" id="menu">
          <li><a href="{{ url('/Cuentapersonal')}}">Regresar</a></li>
+         <li><a href="{{ route('carrito.mostrar') }}">Ver carrito</a></li>
         <li><a href="{{ url('logout') }}">Cerrar Sesión</a></li>
     </ul>
 </nav>
