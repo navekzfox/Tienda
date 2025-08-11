@@ -115,7 +115,7 @@
   text-decoration: none;
 }
 
-.tabla-productos a.carrito {
+.tabla-estilo a.carrito {
   display: inline-block;
   padding: 8px 16px;
   background: linear-gradient(145deg, #ff4081, #e91e63); /* rosa fuerte / magenta */
@@ -129,7 +129,7 @@
   transition: all 0.3s ease;
 }
 
-.tabla-productos a.carrito:hover {
+.tabla-estilo a.carrito:hover {
   background: linear-gradient(145deg, #e91e63, #ff4081);
   color: #ffffff;
   box-shadow: 0 6px 12px rgba(255, 64, 129, 0.5);
