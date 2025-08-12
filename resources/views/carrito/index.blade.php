@@ -70,7 +70,7 @@
         </div>
     @endif
 
-    <div class="acciones">
+    <div class="continuar-compra">
         <a class="carrito" href="{{ url('/ver') }}">Seguir comprando</a>
     </div>
 </main>

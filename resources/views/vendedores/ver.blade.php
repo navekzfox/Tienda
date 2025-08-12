@@ -11,7 +11,7 @@
         <ul>
             <li>{{ session('success') }}</li>
         </ul>
-        <button type="button" class="boton-de-cierre" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
+        <button type="button" class="boton-exito" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
     </div>
 @endif
 

@@ -444,15 +444,43 @@ font-size: 20px;
 
 
 .Alerta-de-exito {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 10px;
-    border-radius: 5px;
+    background: linear-gradient(90deg, #00bfa6, #00ffc3); /* verde-azulado brillante */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
     margin-bottom: 20px;
     position: relative;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+    border-left: 5px solid #00ffff; /* cian claro para énfasis */
     transition: opacity 0.5s ease;
     opacity: 1;
 }
+
+.Alerta-de-exito ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.Alerta-de-exito.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.boton-exito {
+    background-color: #00bfa6;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 
 
 .contenedor-contraseña {
@@ -493,4 +521,24 @@ font-size: 20px;
     height: 100%;
     width: 100%;
     display: block;
+}
+
+.continuar-compra {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #00ffff, #1f2833); /* cian a gris azulado oscuro */
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.continuar-compra:hover {
+    background: linear-gradient(135deg, #1f2833, #00ffff);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    transform: translateY(-2px);
 }
