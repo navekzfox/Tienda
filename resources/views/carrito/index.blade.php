@@ -65,8 +65,10 @@
             </tfoot>
         </table>
 
-
-    @else
+<div class="compra">
+    <a href="{{ route('carrito.comprar') }}" class="carrito">Comprar</a>
+</div>
+                    @else
         <div class="cuadrodetexto">
             <p>No hay productos en el carrito.</p>
         </div>

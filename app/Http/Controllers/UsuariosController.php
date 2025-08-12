@@ -29,7 +29,7 @@ class UsuariosController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'Usuario' => 'required|unique:usuarios|max:10',
+            'Usuario' => 'required|unique:usuarios|max:12',
             'contraseña' => 'required|max:12',
             'Nombre' => 'required|max:50',
             'Apellido' => 'required|max:50',

@@ -57,7 +57,7 @@
 
     <label for="email" class="col-sm-2 col-form-label">Correo electronico:</label>
 
-    <input  type="text" class="controls" name="email" id="email" value="{{old('email')}}">
+    <input  type="text" class="controls" placeholder="Opcional" name="email" id="email" value="{{old('email')}}">
 
     <button class="botons" type="submit">Guardar</button>
 
