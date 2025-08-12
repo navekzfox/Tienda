@@ -64,6 +64,8 @@
                 </tr>
             </tfoot>
         </table>
+
+
     @else
         <div class="cuadrodetexto">
             <p>No hay productos en el carrito.</p>
