@@ -1,6 +1,6 @@
 @extends('layouts/cuenta')
 
-@section('title','Usuario|Gameplanet')
+@section('title','Usuario|Playcity')
 
 @section('contenido')
 

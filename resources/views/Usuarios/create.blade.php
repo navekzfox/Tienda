@@ -1,6 +1,6 @@
 @extends('layouts/cuerpo')
 
-@section('title','Registrate|Gameplanet')
+@section('title','Registrate|Playcity')
 
 @section('contenido')
 

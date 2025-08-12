@@ -1,6 +1,6 @@
 @extends('layouts/cuerpo')
 
-@section('title','confirmación|Playcity')
+@section('title','Confirmación|Playcity')
 
 @section('contenido')
 

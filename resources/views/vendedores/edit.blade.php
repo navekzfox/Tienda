@@ -1,6 +1,6 @@
 @extends('layouts/productos')
 
-@section('title','Editar Productos|Gameplanet')
+@section('title','Editar Productos|Playcity')
 
 @section('contenido')
 

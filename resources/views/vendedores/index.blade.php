@@ -1,6 +1,6 @@
 @extends('layouts/inicio')
 
-@section('title','Vendedores|Gameplanet')
+@section('title','Vendedores|Playcity')
 
 @section('contenido')
 

@@ -1,6 +1,6 @@
 @extends('layouts/plantilla')
 
-@section('title','Usuarios|Gameplanet')
+@section('title','Usuarios|Playcity')
 
 @section('contenido')
 
