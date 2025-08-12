@@ -22,7 +22,6 @@
   </ul>
   <button type="button" class="boton-de-cierre" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
 </div>
-
 @endif
 
 

@@ -5,12 +5,26 @@
 @section('contenido')
 
 <main>
-
+{{-- Mensaje de éxito --}}
 @if(session('success'))
     <div class="Alerta-de-exito">
-        {{ session('success') }}
+        <ul>
+            <li>{{ session('success') }}</li>
+        </ul>
+        <button type="button" class="boton-de-cierre" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
     </div>
 @endif
+
+    {{-- Mensaje de error --}}
+    @if(session('error'))
+<div class="Alerta-de-advertencia" role="alert">
+  <ul>
+    <li>{{ session('error') }}</li>
+  </ul>
+  <button type="button" class="boton-de-cierre" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
+</div>
+@endif
+
 
 <table class="tabla-productos">
 
