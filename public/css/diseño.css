@@ -542,3 +542,25 @@ font-size: 20px;
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
     transform: translateY(-2px);
 }
+
+.compra {
+    text-align: center;
+    margin-top: 20px;
+}
+.compra a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #00bcd4, #0097a7); /* cian claro a cian oscuro */
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #00bcd4;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+.compra a:hover {
+    background: linear-gradient(135deg, #0097a7, #00bcd4);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
