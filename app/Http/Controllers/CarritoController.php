@@ -90,7 +90,7 @@ public function comprar()
 
             // Registrar la venta
             Ventas::create([
-                'Producto' => $producto->nombre,
+                'Productos' => $producto->nombre,
                 'Usuario' => $usuario,
                 'Cantidad' => $item['cantidad'],
                 'Total' => $item['precio'] * $item['cantidad'],

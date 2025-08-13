@@ -9,8 +9,11 @@
 
     {{-- Mensaje de éxito --}}
     @if(session('success'))
-        <div class="cuadrodetexto-advertencia">
-            {{ session('success') }}
+        <div class="Alerta-de-exito">
+            <ul>
+                <li>{{ session('success') }}</li>
+            </ul>
+            <button type="button" class="boton-exito" onclick="cerrarAlerta(this)" aria-label="Cerrar">x</button>
         </div>
     @endif
 
