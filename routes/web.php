@@ -14,6 +14,7 @@ use App\Http\Controllers\CarritoController;
 Route::get('/carrito/agregar/{id}', [CarritoController::class, 'agregar'])->name('carrito.agregar');
 Route::get('/carrito', [CarritoController::class, 'mostrar'])->name('carrito.mostrar');
 Route::get('/carrito/eliminar/{id}', [CarritoController::class, 'eliminar'])->name('carrito.eliminar');
+Route::get('/carrito/comprar', [CarritoController::class, 'comprar'])->name('carrito.comprar');
 
 /** Rutas del login de los vendedores */
 Route::get('vendedores/login', [VendedorLoginController::class, 'showLoginForm'])

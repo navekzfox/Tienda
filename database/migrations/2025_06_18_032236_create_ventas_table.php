@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id('ID');
+            $table->string('Producto',12);
             $table->string('Usuario',12);
+            $table->integer('Cantidad');
+            $table->decimal('Total', 10, 2);
             $table->timestamp('fecha_venta');
         });
     }
