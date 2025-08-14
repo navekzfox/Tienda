@@ -28,6 +28,7 @@ class VendedorController extends Controller
      */
     public function store(Request $request)
     {
+        // Validar los datos del formulario
          $request->validate([
             'nombre' => 'required|max:50',
             'descripcion' => 'max:500',
