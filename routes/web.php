@@ -4,6 +4,7 @@ use App\Http\Controllers\VendedorLoginController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\VendedorController;
 use App\Http\Controllers\UsuariosController;
+use App\Models\Ventas;
 use App\Models\Productos;
 use App\Models\Usuarios;
 use Illuminate\Support\Facades\Route;
@@ -66,6 +67,12 @@ Route::get('/ver',function ()
     {
         $objeto = Productos::all();
     return view('vendedores.ver', ['objeto' => $objeto]);
+    });
+
+    Route::get('/ventas', function ()
+    {
+        $Venta = Ventas::all();
+        return view('vendedores.ventas', ['Venta' => $Venta]);
     });
 
     /** Rutas de la página de inicio*/

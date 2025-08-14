@@ -23,6 +23,7 @@
 <ul class="menu" id="menu">
     <li><a href="{{ url('Vendedores/create') }}">Agregar productos</a></li>
          <li><a href="{{ url('Vendedores/show') }}">Ver productos</a></li>
+         <li><a href="{{ url('/ventas') }}">Ver ventas</a></li>
         <li><a href="{{ route('vendedores.logout') }}" class="advertencia">Cerrar sesión</a></li>
     </ul>
 </nav>

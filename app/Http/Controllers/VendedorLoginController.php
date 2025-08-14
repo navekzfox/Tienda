@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Vendedor;
 use App\Models\vendedores;
 use Illuminate\Support\Facades\Session;
 
@@ -35,12 +34,20 @@ class VendedorLoginController extends Controller
         return redirect('/');
     }
 
-    public function showCuenta()
-    {
-        $vend = null;
-        if (Session::has('vendedor_id')) {
-            $vend = vendedores::find(Session::get('vendedor_id'));
-        }
-        return view('vendedores.cuenta', ['vendedor' => $vend]);
+   public function showCuenta()
+{
+    $vend = null;
+    $layout = 'layouts.cuerpo';// Cambia al layout por defecto
+
+    if (Session::has('vendedor_id')) {
+        $vend = vendedores::find(Session::get('vendedor_id'));
+        $layout = 'layouts.plantilla'; // Cambia al layout especial si está logueado
     }
+
+    return view('vendedores.cuenta', [
+        'vendedor' => $vend,
+        'layout' => $layout
+    ]);
+}
+
 }
