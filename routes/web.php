@@ -18,13 +18,13 @@ Route::get('/carrito/eliminar/{id}', [CarritoController::class, 'eliminar'])->na
 Route::get('/carrito/comprar', [CarritoController::class, 'comprar'])->name('carrito.comprar');
 
 /** Rutas del login de los vendedores */
-Route::get('vendedores/login', [VendedorLoginController::class, 'showLoginForm'])
+Route::get('Vendedores/login', [VendedorLoginController::class, 'showLoginForm'])
     ->name('vendedores.login');
-Route::post('vendedores/login', [VendedorLoginController::class, 'login'])
+Route::post('Vendedores/login', [VendedorLoginController::class, 'login'])
     ->name('vendedores.login.submit');
-Route::get('vendedores/logout', [VendedorLoginController::class, 'logout'])
+Route::get('Vendedores/logout', [VendedorLoginController::class, 'logout'])
     ->name('vendedores.logout');
-Route::get('vendedores/cuenta', [VendedorLoginController::class, 'showCuenta'])
+Route::get('Vendedores/cuenta', [VendedorLoginController::class, 'showCuenta'])
     ->name('vendedores.cuenta');
 
 /** Rutas del login de los usuarios*/

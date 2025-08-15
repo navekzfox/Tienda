@@ -13,7 +13,7 @@
 <br>
 <a href="{{ url('/')}}" class="btn btn-secondary">Regresar</a>
 <br>
-<a href="{{ url('vendedores/login')}}" class="btn btn-primary btn-sm">Continuar si es vendedor</a>
+<a href="{{ url('Vendedores/login')}}" class="btn btn-primary btn-sm">Continuar si es vendedor</a>
 
 </div>
 
