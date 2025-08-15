@@ -1,7 +1,7 @@
 @extends($layout)
 @section('title','Cuenta Vendedor')
 @section('contenido')
-<main class="container py-4">
+
 
 
     @if($vendedor)
@@ -17,5 +17,5 @@
 
         <div class="cuadrodetexto"><a href="{{ url('/') }}">Regresar</a></div>
     @endif
-</main>
+
 @endsection

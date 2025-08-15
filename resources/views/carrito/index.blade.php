@@ -3,7 +3,6 @@
 @section('title', 'Carrito de Compras | Playcity')
 
 @section('contenido')
-<main class="container py-4">
 
     <h3 class="titulo">🛒 Carrito de Compras</h3>
 
@@ -80,5 +79,5 @@
     <div class="continuar-compra">
         <a class="carrito" href="{{ url('/ver') }}">Seguir comprando</a>
     </div>
-</main>
+
 @endsection

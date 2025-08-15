@@ -4,8 +4,6 @@
 
 @section('contenido')
 
-<main class="container py-4">
-
     <h3 class="titulo">Información personal</h3>
 
     @if ($usuarioLogueado)
@@ -38,8 +36,6 @@
     @else
         <div class="Alerta-de-advertencia">No hay un usuario logueado.</div>
     @endif
-
-</main>
 
 
 @endsection
