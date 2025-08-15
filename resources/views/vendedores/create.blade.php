@@ -23,7 +23,7 @@
 
 @endif
 
-<form action="{{ url('Vendedores') }}" method="post">
+<form action="{{ url('Vendedores') }}" method="post" autocomplete="off">
 
 @csrf
 

@@ -16,7 +16,7 @@
         @endif
         @csrf
             <label for="Clave_ingreso" class="form-label">Código de ingreso</label>
-            <input type="password" id="Clave_ingreso" name="Clave_ingreso" class="controls" value="{{ old('codigo') }}">
+            <input type="password" id="Clave_ingreso" name="Clave_ingreso" class="controls" value="{{ old('codigo') }}" autocomplete="new-password">
 
         <button class="botons">Ingresar</button>
     </form>

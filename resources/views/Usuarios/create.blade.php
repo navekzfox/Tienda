@@ -23,7 +23,7 @@
 
 @endif
 
-<form action="{{ url('Usuarios') }}" method="post">
+<form action="{{ url('Usuarios') }}" method="post" autocomplete="off">
 
 @csrf
 
@@ -35,7 +35,7 @@
     <label for="contraseña" class="col-sm-2 col-form-label">Contraseña:</label>
 
     <div class="contenedor-contraseña">
-    <input type="password" class="controls" name="contraseña" id="contraseña" value="{{old('contraseña')}}">
+    <input type="password" class="controls" name="contraseña" id="contraseña" value="{{old('contraseña')}}" autocomplete="new-password">
     <button onclick="togglePassword()" type="button">
         <img src="{{ asset('imagen/Oculto.png') }}">
     </button>

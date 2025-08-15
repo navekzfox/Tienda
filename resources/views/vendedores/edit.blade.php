@@ -23,7 +23,7 @@
 
 @endif
 
-<form action="{{ url('Vendedores/'.$objeto->id) }}" method="post">
+<form action="{{ url('Vendedores/'.$objeto->id) }}" method="post" autocomplete="off">
 @method("PUT")
 @csrf
 

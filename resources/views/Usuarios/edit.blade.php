@@ -23,7 +23,7 @@
 
 @endif
 
-<form action="{{ url('Usuarios/'.$datos->id) }}" method="post">
+<form action="{{ url('Usuarios/'.$datos->id) }}" method="post" autocomplete="off">
 @method("PUT")
 @csrf
 
@@ -34,7 +34,7 @@
 
     <label for="contraseña" class="col-sm-2 col-form-label">Contraseña:</label>
      <div class="contenedor-contraseña">
-    <input type="password" class="controls" name="contraseña" id="contraseña" value="{{$datos->contraseña}}" required>
+    <input type="password" class="controls" name="contraseña" id="contraseña" value="{{$datos->contraseña}}" autocomplete="new-password" required>
     <button onclick="togglePassword()" type="button">
         <img src="{{ asset('imagen/Oculto.png') }}">
     </button>
