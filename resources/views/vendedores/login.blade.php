@@ -3,7 +3,7 @@
 @section('contenido')
 <main class="formulario">
     <h2>Ingreso Vendedor</h2>
-    <form action="{{ route('vendedores.login.submit') }}" method="POST">
+    <form action="{{ route('vendedores.login.submit') }}" method="POST" autocomplete="off">
         @if ($errors->any())
             <div class="Alerta-de-advertencia" role="alert">
                 <ul>
@@ -16,7 +16,7 @@
         @endif
         @csrf
             <label for="Clave_ingreso" class="form-label">Código de ingreso</label>
-            <input type="password" id="Clave_ingreso" name="Clave_ingreso" class="controls" value="{{ old('codigo') }}" autocomplete="new-password">
+            <input type="password" id="Clave_ingreso" name="Clave_ingreso" class="controls" value="{{ old('codigo') }}">
 
         <button class="botons">Ingresar</button>
     </form>
