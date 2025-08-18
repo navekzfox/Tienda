@@ -15,7 +15,7 @@
 <div class="encabezado">
 
 
-     <a href="{{ url('Vendedores') }}" class=""><img src="{{ asset('imagen/Ellen2.png')}}" alt=""></a>
+     <a href="{{ url('Vendedores') }}" class=""><img src="{{ asset('imagen/polistation.jpg')}}" alt=""></a>
      <h2 class="Titulo">Playcity</h2>
 </div>
 

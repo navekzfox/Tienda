@@ -14,7 +14,7 @@
 <header>
 <div class="encabezado">
 
-    <img src="{{ asset('imagen/Ellen2.png')}}" alt="">
+    <img src="{{ asset('imagen/polistation.jpg')}}" alt="">
 <h2 class="Titulo">Playcity</h2>
 </div>
 
