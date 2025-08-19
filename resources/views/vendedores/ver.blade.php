@@ -35,7 +35,7 @@
     <th data-label="Descripción">Descripción</th>
     <th data-label="Precio">Precio</th>
     <th data-label="Cantidad">Cantidad</th>
-    <th data-label="Fecha de creación">Fecha de agregado</th>
+    <th data-label="Fecha de agregado">Fecha de agregado</th>
  </tr>
  </thead>
 
@@ -45,9 +45,9 @@
     <td data-label="ID" style="display: none;">{{$info->id}}</td>
     <td data-label="Nombre">{{$info->nombre}}</td>
     <td data-label="Descripción">{{$info->descripcion}}</td>
-    <td data-label="Precio">{{$info->precio}}</td>
+    <td data-label="Precio">MXN$ {{ number_format($info->precio, 2) }}</td>
     <td data-label="Cantidad">{{$info->cantidad}}</td>
-    <td data-label="Fecha de creación">{{$info->created_at}}</td>
+    <td data-label="Fecha de agregado" style="display: none;">{{$info->created_at}}</td>
     <td>
         <a class="carrito" href="{{ route('carrito.agregar', $info->id) }}">Añadir al carrito</a>
     </td>

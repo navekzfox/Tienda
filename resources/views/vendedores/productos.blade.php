@@ -15,7 +15,7 @@
     <th >Descripción</th>
     <th >Precio</th>
     <th >Cantidad</th>
-    <th >Fecha de Creación</th>
+    <th >Fecha de agregado</th>
 
  </tr>
  </thead>
@@ -26,9 +26,9 @@
     <td data-label="ID" style="display: none;">{{$info->id}}</td>
     <td data-label="Nombre">{{$info->nombre}}</td>
     <td data-label="Descripción">{{$info->descripcion}}</td>
-    <td data-label="Precio">{{$info->precio}}</td>
+    <td data-label="Precio">MXN$ {{ number_format($info->precio, 2) }}</td>
     <td data-label="Cantidad">{{$info->cantidad}}</td>
-    <td data-label="Fecha de Creación">{{$info->created_at}}</td>
+    <td data-label="Fecha de agregado">{{$info->created_at}}</td>
     <td>
                     <a href="{{ url('Vendedores/' . $info->id . '/edit') }}" class="editar">
                         Editar
