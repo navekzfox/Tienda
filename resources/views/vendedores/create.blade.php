@@ -49,7 +49,7 @@
 
 <button type="submit" class="botons" >Guardar</button>
 
-<a href="{{ url('vendedores/cuenta')}}">Regresar</a>
+<a href="{{ url('Vendedores/cuenta')}}">Regresar</a>
 
 </form>
 </div>
