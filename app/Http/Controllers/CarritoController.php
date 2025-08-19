@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Ventas;
 use App\Models\Productos;
-use App\Models\Usuarios;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
@@ -35,13 +33,13 @@ class CarritoController extends Controller
                 "cantidad" => 1
             ];
         } else {
-            return redirect()->back()->with('error', 'Producto sin stock.');
+            return redirect()->back()->with('error', 'Producto sin stock.');// Si no hay stock, no se puede agregar al carrito y devuelve un error
         }
     }
 
     session()->put('carrito', $carrito);
 
-    return redirect()->back()->with('success', 'Producto añadido al carrito');
+    return redirect()->back()->with('success', 'Producto añadido al carrito');// Redirigir de vuelta con un mensaje de éxito
 }
 
 
@@ -74,7 +72,7 @@ public function comprar()
         return redirect()->route('carrito.mostrar')->with('error', 'El carrito está vacío.');
     }
 
-    $usuario = session('usuario_id'); // Asegúrate de que este valor existe en sesión
+    $usuario = session('usuario_id');
 
     DB::beginTransaction(); // Iniciar transacción para asegurar integridad, (DB::beginTransaction): garantizan que si ocurre un error (por ejemplo, stock insuficiente), todo se revierte.
 

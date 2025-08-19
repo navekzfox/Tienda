@@ -34,16 +34,16 @@ class VendedorController extends Controller
             'descripcion' => 'max:500',
             'precio' => 'required|max:15',
             'cantidad' => 'required|max:50'
-        ]);
+        ]);// Validar los campos de entrada
 
         $objeto = new Productos();
         $objeto-> nombre= $request->input('nombre');
         $objeto->descripcion = $request->input('descripcion');
         $objeto->precio = $request->input('precio');
         $objeto->cantidad = $request->input('cantidad');
-        $objeto->save();
+        $objeto->save();// Guardar los datos del producto en la base de datos
 
-        return view("vendedores.mensaje",['msg' => "Se ha guardado el producto correctamente"]);
+        return view("vendedores.mensaje",['msg' => "Se ha guardado el producto correctamente"]);// Redirigir a una vista de mensaje de éxito
     }
 
     /**
@@ -52,7 +52,7 @@ class VendedorController extends Controller
     public function show(vendedores $vendedores)
     {
         $objeto = Productos::all();
-    return view('vendedores.productos', ['objeto' => $objeto]);
+    return view('vendedores.productos', ['objeto' => $objeto]);// Mostrar todos los productos disponibles
     }
 
     /**
@@ -74,17 +74,16 @@ class VendedorController extends Controller
             'descripcion' => 'max:500',
             'precio' => 'required|max:15',
             'cantidad' => 'required|max:50'
-        ]);
+        ]);// Validar los campos de entrada
 
         $objeto = Productos::find($id);
         $objeto-> nombre= $request->input('nombre');
         $objeto->descripcion = $request->input('descripcion');
         $objeto->precio = $request->input('precio');
         $objeto->cantidad = $request->input('cantidad');
-        $objeto->save();
+        $objeto->save();// Guardar los cambios en la base de datos
 
-
-        return view("vendedores.mensaje",['msg' => "Se ha modificado el producto correctamente"]);
+        return view("vendedores.mensaje",['msg' => "Se ha modificado el producto correctamente"]);// Redirigir a una vista de mensaje de éxito
     }
 
     /**
@@ -95,6 +94,6 @@ class VendedorController extends Controller
         $datos = Productos::find($id);
         $datos->delete();
 
-        return redirect("Vendedores/show");
+        return redirect("Vendedores/show");// Redirigir a la lista de productos después de eliminar uno
     }
 }

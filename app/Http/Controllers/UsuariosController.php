@@ -35,7 +35,7 @@ class UsuariosController extends Controller
             'Apellido' => 'required|max:50',
             'Fecha' => 'required|date',
             'email' => 'nullable|email'
-        ]);
+        ]);// Validar los campos de entrada
 
         $cuenta = new Usuarios();
         $cuenta->Usuario = $request->input('Usuario');
@@ -44,10 +44,10 @@ class UsuariosController extends Controller
         $cuenta->Apellido = $request->input('Apellido');
         $cuenta->Fecha_nacimiento = $request->input('Fecha');
         $cuenta->email = $request->input('email');
-        $cuenta->save();
+        $cuenta->save();// Guardar los datos del usuario en la base de datos
 
 
-        return view("Usuarios.mensaje",['msg' => "Se ha guardado la cuenta correctamente"]);
+        return view("Usuarios.mensaje",['msg' => "Se ha guardado la cuenta correctamente"]);// Redirigir a una vista de mensaje de éxito
     }
 
     /**
@@ -79,7 +79,7 @@ class UsuariosController extends Controller
             'Apellido' => 'required|max:50',
             'Fecha' => 'required|date',
             'email' => 'nullable|email'
-        ]);
+        ]);// Validar los campos de entrada
 
         $cuenta = Usuarios::find($id);
         $cuenta->Usuario = $request->input('Usuario');
@@ -88,10 +88,10 @@ class UsuariosController extends Controller
         $cuenta->Apellido = $request->input('Apellido');
         $cuenta->Fecha_nacimiento = $request->input('Fecha');
         $cuenta->email = $request->input('email');
-        $cuenta->save();
+        $cuenta->save();// Guardar los cambios en la base de datos
 
 
-        return view("Usuarios.msjupd",['msg' => "Se ha modificado la cuenta correctamente"]);
+        return view("Usuarios.msjupd",['msg' => "Se ha modificado la cuenta correctamente"]);// Redirigir a una vista de mensaje de éxito
     }
 
     /**
@@ -102,7 +102,7 @@ class UsuariosController extends Controller
         $datos = Usuarios::find($id);
         $datos->delete();
 
-        return redirect("/");
+        return redirect("/");// Redirigir a la página principal después de eliminar el usuario
     }
 
 }
