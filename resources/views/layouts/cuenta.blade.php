@@ -21,6 +21,7 @@
 <nav class="navegacion">
 
 <ul class="menu" id="menu">
+    @if($usuarioLogueado)
     <li><a href="/logout">Cerrar sesión</a></li>
     <li><a href="{{ url('Usuarios/' . $usuarioLogueado->id . '/edit') }}">Editar cuenta</a></li>
     <li><a href="{{ url('/ver') }}">Ver productos</a></li>
@@ -30,6 +31,11 @@
                         @csrf
                         <button type="submit" class="advertencia" onclick="return confirm('¿Estás seguro?')">Eliminar cuenta</button>
                     </form></li>
+                    @else
+    <li><a href="{{ url('/login') }}">Iniciar sesión</a></li>
+    <li><a href="{{ url('/register') }}">Registrarse</a></li>
+    @endif
+    <li><a href="{{ url('/')}}">Inicio</a></li>
     </ul>
 </nav>
 </div>
